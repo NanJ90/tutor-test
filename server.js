@@ -12,13 +12,13 @@ var bodyParser = require("body-parser");
 
 
     // For Passport
-    // app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized:true})); // session secret
-    // app.use(passport.initialize());
-    // app.use(passport.session()); // 
+    app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized:true})); // session secret
+    app.use(passport.initialize());
+    app.use(passport.session()); // 
 
 
     // //load passport strategies
-    // require('./app/config/passport/passport.js')(passport);
+    require('./app/config/passport/passport.js')(passport);
 
 
 // Sets up the Express App
