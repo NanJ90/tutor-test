@@ -10,7 +10,7 @@ var bodyParser = require("body-parser");
     var session    = require('express-session');
     var env        = require('dotenv').load();
 
-
+var app = express();
     // For Passport
     app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized:true})); // session secret
     app.use(passport.initialize());
@@ -23,7 +23,7 @@ var bodyParser = require("body-parser");
 
 // Sets up the Express App
 // =============================================================
-var app = express();
+
 var PORT = process.env.PORT || 3001;
 
 // Requiring our models for syncing
