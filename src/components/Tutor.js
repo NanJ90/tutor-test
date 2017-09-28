@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import TutorCalendar from './children/TutorCalendar';
 import moment from 'moment';
+import helpers from '../utils/helpers';
 
 class Tutor extends Component {
   // constructor(){
@@ -26,12 +27,12 @@ class Tutor extends Component {
     //         // this.setState({events:res.body});
     //     });
     // }
-    // componentDidMount(){
-    //      // console.log(this.state);
-    //     helpers.getTutorCalendar().then(res =>{
-    //         console.log("populate student calendar",res.data);
-    //         });     
-    // }
+    componentDidMount(){
+         // console.log(this.state);
+        helpers.getSession().then(res =>{
+            console.log("populate student calendar",res.data);
+            });     
+    }
   
   render() {
     return (
